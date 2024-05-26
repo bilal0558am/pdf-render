@@ -1,12 +1,11 @@
 import "./styles/index.scss";
 import { PDFViewer } from "./components/PDFViewer";
-
-const PDF_URL = "https://www.sldttc.org/allpdf/21583473018.pdf";
+import SamplePdf from "./assets/sample.pdf";
 
 function App() {
   return (
     <>
-      <PDFViewer url={PDF_URL} />
+      <PDFViewer file={SamplePdf} />
     </>
   );
 }

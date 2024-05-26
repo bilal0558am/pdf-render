@@ -18,7 +18,7 @@ const options = {
 
 const PDF_MAX_WIDTH = 600;
 
-export const PDFViewer = ({ url }: { url: string }) => {
+export const PDFViewer = ({ file }: { file: string | File }) => {
   const [numPages, setNumPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(1);
   const [width, setWidth] = useState(window.innerWidth);
@@ -52,7 +52,7 @@ export const PDFViewer = ({ url }: { url: string }) => {
     <div className="pdf-container">
       <div className="pdf-container__pdf-view">
         <Document
-          file={url}
+          file={file}
           options={options}
           onLoadSuccess={onDocumentLoadSuccess}
           loading={<Loader />}
