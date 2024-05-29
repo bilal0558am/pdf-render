@@ -4,7 +4,7 @@ button {
   align-items: center;
   background-color: $primary;
   border: 0;
-  border-radius: 40px;
+  border-radius: 4px;
 
   color: #ffffff;
   cursor: pointer;
@@ -41,6 +41,6 @@ button:active {
 
 button:disabled {
   cursor: not-allowed;
-  background: rgba(255, 255, 255, 0.2);
-  color: rgba(0, 0, 0, 0.6);
+  background: rgb(180, 180, 180);
+  color: rgb(80, 80, 80);
 }

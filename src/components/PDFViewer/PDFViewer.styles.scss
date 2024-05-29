@@ -2,28 +2,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 1rem;
+  justify-content: space-between;
+  height: 100dvh;
+  position: relative;
 
   &__pdf-view {
     display: flex;
     align-items: center;
+    height: 100%;
     @media (min-width: 768px) {
       min-height: 775px;
     }
   }
 
   &__navigation {
-    &-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      margin: 1rem;
-    }
-    &-buttons {
-      display: flex;
-      gap: 1rem;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem;
+
+    &-button {
+      &--prev {
+        background: #ff0000;
+      }
     }
   }
 }

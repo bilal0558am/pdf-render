@@ -59,31 +59,31 @@ export const PDFViewer = ({ file }: { file: string | File }) => {
         >
           <Page
             pageNumber={pageNumber}
-            width={Math.min(width - 32, PDF_MAX_WIDTH)}
+            width={Math.min(width, PDF_MAX_WIDTH)}
           />
         </Document>
       </div>
 
-      <div className="pdf-container__navigation-wrapper">
+      <div className="pdf-container__navigation">
+        <button
+          type="button"
+          disabled={pageNumber <= 1}
+          onClick={previousPage}
+          className="pdf-container__navigation-button pdf-container__navigation-button--prev"
+        >
+          Prev
+        </button>
         <p>
           Page {pageNumber || (numPages ? 1 : "--")} of {numPages || "--"}
         </p>
-        <div className="pdf-container__navigation-buttons">
-          <button
-            type="button"
-            disabled={pageNumber <= 1}
-            onClick={previousPage}
-          >
-            Previous
-          </button>
-          <button
-            type="button"
-            disabled={pageNumber >= numPages}
-            onClick={nextPage}
-          >
-            Next
-          </button>
-        </div>
+        <button
+          type="button"
+          disabled={pageNumber >= numPages}
+          onClick={nextPage}
+          className="pdf-container__navigation-button"
+        >
+          Next
+        </button>
       </div>
     </div>
   );
