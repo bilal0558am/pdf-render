@@ -32,6 +32,12 @@
     &-button {
       &--prev {
         background: #ff0000;
+
+        &:active,
+        &:hover:not(:disabled),
+        &:focus {
+          background-color: #cc0000;
+        }
       }
     }
   }
